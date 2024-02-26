@@ -1,0 +1,14 @@
+.bold-text {
+  font-size: 15px;
+}
+
+.center {
+  text-align: center;
+}
+
+.circle-button {
+  width: 11px !important;
+  height: 11px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+}

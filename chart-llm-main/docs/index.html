@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chart-LLM Dataset</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/141/141791.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-2 publication-title">NL Dataset Generation Framework for Visualizations
+                            Powered by LLM</h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- <span class="author-block">
+                                <a href="https://github.com">Anonymous authors</a><sup>1</sup>,</span> -->
+                            <span class="author-block">
+                                <a href="https://hyungkwonko.info/">Hyung-Kwon Ko</a><sup>1</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://www.hyeonjeon.com/">Hyeon Jeon</a><sup>2</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="http://hcil.snu.ac.kr/people/gwanmo-park">Gwanmo Park</a><sup>2</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://dhkim16.github.io/">Dae Hyun Kim</a><sup>1</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://www.namwkim.org/">Nam Wook Kim</a><sup>3</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://juhokim.com/">Juho Kim</a><sup>1</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="http://hcil.snu.ac.kr/people/jinwook-seo">Jinwook Seo</a><sup>2</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>KAIST,</span>
+                            <span class="author-block"><sup>2</sup>Seoul National University,</span>
+                            <span class="author-block"><sup>3</sup>Boston College</span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2309.10245"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                                <!-- Video Link. -->
+                                <!-- <span class="link-block">
+                                    <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-youtube"></i>
+                                        </span>
+                                        <span>Video</span>
+                                    </a>
+                                </span> -->
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/hyungkwonko/chart-llm-data"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <!-- Dataset Link. -->
+                                <span class="link-block">
+                                    <a href="./explorer.html" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="far fa-images"></i>
+                                        </span>
+                                        <span>Data</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <img src="./static/img/fig3.png" id="teaser" autoplay muted loop playsinline height="100%">
+                <h2 class="subtitle has-text-centered">
+                    <span class="dnerf">NL generation framework using Vega-Lite specifications and LLMs</span>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We introduce VL2NL, a Large Language Model (LLM) framework that generates rich and diverse
+                            NL datasets using Vega-Lite specifications as input, thereby streamlining the
+                            development of Natural Language Interfaces (NLIs) for data visualization. To synthesize
+                            relevant chart semantics accurately and enhance syntactic diversity in each NL dataset, we
+                            leverage 1) a guided discovery incorporated into prompting so that LLMs can steer themselves
+                            to create faithful NL datasets in a self-directed manner; 2) a score-based paraphrasing to
+                            augment NL syntax along with four language axes. We also present a new collection of 1,981
+                            real-world Vega-Lite specifications that have increased diversity and complexity than
+                            existing chart collections. When tested on our chart collection, VL2NL extracted chart
+                            semantics and generated L1/L2 captions with 89.4% and 76.0% accuracy, respectively. It also
+                            demonstrated generating and paraphrasing utterances and questions with greater diversity
+                            compared to the benchmarks. Last, we discuss how our NL datasets and framework can be
+                            utilized in real-world scenarios.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+
+            <!-- Paper video. -->
+            <!-- <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Video</h2>
+                    <div class="publication-video">
+                        <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div> -->
+            <!--/ Paper video. -->
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <img src="./static/img/teaser.png" id="teaser" autoplay muted loop playsinline height="100%">
+                <h2 class="subtitle has-text-centered">
+                    <span class="dnerf">Sample chart images of our Vega-Lite specifications</span>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                        <p>
+                            Our paraphrasing technique is inspired by a linear interpolation in the latent space for
+                            image generation and
+                            manipulation as demonstrated in many system and application papers. It enables a smooth
+                            transition from one
+                            expression to another by focusing on creating controllable and meaningful variations of a
+                            single sentence. We employ
+                            a five-point Likert-scale and assign one of the axes to each. Here, we focus on altering
+                            only the sentence's syntax,
+                            while maintaining its meaning. In detail, we provide LLMs with a sentence (i.e., Example
+                            Sentence) and an
+                            explanation about one of the defined axes (i.e., Axis) and its two directions (i.e.,
+                            Direction-1, Direction-2). We
+                            assign a specific value on a Likert scale ranging from one to five, to paraphrase the
+                            sentence as if it were spoken
+                            by a person using a language with a certain degree indicated by the score.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <img src="./static/img/paraphrase.png" id="teaser" autoplay muted loop playsinline height="100%">
+                <h2 class="subtitle has-text-centered">
+                    <span class="dnerf">Paraphrasing with two language axes</span>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <p class="title is-4">Types of NL Datasets</p>
+
+            <div class="hero-body">
+                <img src="./static/img/sample.png" height="100%">
+                <h2 class="subtitle has-text-centered">
+                    <span class="dnerf">Example Vega-Lite chart</span>
+                </h2>
+            </div>
+
+            <p class="title is-5">L1 Caption</p>
+            <p class="title is-6">It contains elemental and encoded
+                properties of the visualization (i.e., the visual components that comprise a graphical representation's
+                design and construction).</p>
+            <p class="is-6" style="font-style: italic;">e.g., This is a bar chart that uses data from a
+                superstore. The chart encodes the 'Region' field on the x-axis and the sum of 'Profit' on the y-axis.
+                The 'Ship Status' field is represented by different colors.</p>
+
+            <br>
+
+            <p class="title is-5">L2 Caption</p>
+            <p class="title is-6">It contains statistical and relational properties of the visualization.</p>
+            <p class="is-6" style="font-style: italic;">e.g., The visualization presents the total profit for each
+                region, with the West region having the highest profit of approximately 67860.56 and the South region
+                having the lowest profit of approximately 26551.72.</p>
+
+            <br>
+
+            <p class="title is-5">Utterance</p>
+            <p class="title is-6">An utterance is what a user would say to generate a given chart. There are three types
+                of utterances.</p>
+            <p class="is-6" style="font-style: italic;">e.g., Create a bar chart showing the sum of profit from
+                different regions.</p>
+
+            <br>
+
+            <p class="title is-5">Question</p>
+            <p class="title is-6">Questions are used to analyze charts and elicit high-level decision. There are
+                different types of questions.</p>
+            <p class="is-6" style="font-style: italic;">e.g., What is the Sum(profit) of Central region?</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <p class="title is-4">Sentence Paraphrasing Example (Formality score: <span
+                    id="formalityScoreDisplay">3</span>)</p>
+            <p class="title is-6">e.g., Create a bar chart showing the sum of profit from different regions.</p>
+            <p class="title is-6" style="font-style: italic;" id="paraphrasedSentence">Please create a bar chart
+                illustrating
+                the aggregate
+                profit from various geographical areas.</p>
+            <div>
+                <span style="font-style: italic;">Score 1: Colloquial</span>
+                <span style="font-style: italic; float: right;">Score 5: Standard</span>
+            </div>
+            <input style="width: 100%;" type="range" min="1" max="5" value="3" id="formalityScoreSlider"
+                class="form-range">
+        </div>
+    </section>
+
+    <script>
+        const sentences = {
+            1: "Can you put together a bar chart showing the aggregate profit from various geographical areas?",
+            2: "Could you create a bar chart that illustrates the aggregate profit from various geographical areas?",
+            3: "Please create a bar chart illustrating the aggregate profit from various geographical areas.",
+            4: "It is requested that you create a bar chart illustrating the aggregate profit from various geographical areas.",
+            5: "You are required to construct a bar chart illustrating the aggregate profit from various geographical areas."
+        };
+
+        const formalityScoreSlider = document.getElementById('formalityScoreSlider');
+        const formalityScoreDisplay = document.getElementById('formalityScoreDisplay');
+        const paraphrasedSentence = document.getElementById('paraphrasedSentence');
+
+        formalityScoreSlider.oninput = function () {
+            const score = this.value;
+            formalityScoreDisplay.textContent = score;
+            paraphrasedSentence.textContent = sentences[score];
+        };
+    </script>
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre>
+<code>@misc{ko2023natural,
+    title={Natural Language Dataset Generation Framework for Visualizations Powered by Large Language Models}, 
+    author={Hyung-Kwon Ko and Hyeon Jeon and Gwanmo Park and Dae Hyun Kim and Nam Wook Kim and Juho Kim and Jinwook Seo},
+    year={2023},
+    eprint={2309.10245},
+    archivePrefix={arXiv},
+    primaryClass={cs.HC}
+}</code></pre>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <a class="icon-link" href="https://arxiv.org/abs/2309.10245">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+                <a class="icon-link" href="https://github.com/hyungkwonko/chart-llm-data" class="external-link"
+                    disabled>
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content has-text-centered">
+                        <p>
+                            The website template is borrowed from <a class="f4"
+                                href="https://github.com/nerfies/nerfies.github.io">here</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
